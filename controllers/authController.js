@@ -1,6 +1,8 @@
-import { User } from "../models/user.js";
-import { Role } from "../models/role.js";
+import { User } from "../models/userModel.js";
+import { Role } from "../models/roleModel.js";
 import {generateJWT} from '../utility/generateJWT.js'
+import HandleError from '../middleware/error/errorHandler.js'
+
 export const register =HandleError( async (req, res) => {
   try {
     const { username, email, password, role } = req.body;

@@ -5,6 +5,8 @@ import dotenv from "dotenv";
 dotenv.config();
 import express from 'express'
 import connectionToDB from './models/connection.js'
+import authRoutes from './routes/authRoutes.js'
+import HandleGlobalErrors from './middleware/error/globalErrorHandler.js'
 const port = process.env.PORT || 8000
 
 //Invoke
